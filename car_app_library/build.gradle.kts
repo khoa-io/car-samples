@@ -14,27 +14,10 @@
  * limitations under the License.
  */
 
-apply plugin: 'com.android.library'
-
-android {
-    compileSdk 33
-
-    defaultConfig {
-        minSdkVersion 23
-        targetSdkVersion 33
-        versionCode 1
-        versionName "1.0"
-    }
-
-    compileOptions {
-        targetCompatibility = JavaVersion.VERSION_1_8
-        sourceCompatibility = JavaVersion.VERSION_1_8
-    }
-    namespace "androidx.car.app.sample.showcase.common"
-}
-
-dependencies {
-    implementation "androidx.core:core:1.6.0-alpha01"
-    implementation "androidx.car.app:app:1.3.0-beta01"
-    implementation "androidx.annotation:annotation-experimental:1.0.0"
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.compose.compiler) apply false
+    alias(libs.plugins.dynamic.feature) apply false
 }
